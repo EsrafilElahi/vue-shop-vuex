@@ -1,0 +1,40 @@
+{
+  "clothes": [
+    {
+      "id": "1",
+      "title": "clothes 1",
+      "price": 120000
+    },
+    {
+      "id": "2",
+      "title": "clothes 2",
+      "price": 245000
+    }
+  ],
+
+  "shoes": [
+    {
+      "id": "1",
+      "title": "shoes 1",
+      "price": 142000
+    },
+    {
+      "id": "2",
+      "title": "shoes 2",
+      "price": 230000
+    }
+  ],
+
+  "digitals": [
+    {
+      "id": "1",
+      "title": "digitals 1",
+      "price": 785000
+    },
+    {
+      "id": "2",
+      "title": "digitals 2",
+      "price": 655000
+    }
+  ]
+}
