@@ -19,11 +19,16 @@ export default {
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 html body #app {
   min-width: 100vw;
   min-height: 100vh;
   width: 100%;
   height: 100%;
   padding: 5rem 1rem;
+  overflow-x: hidden !important;
 }
 </style>
