@@ -2,6 +2,7 @@ import axios from "axios";
 
 const state = () => ({
   allPhotos: [],
+  basket: [],
 });
 
 const getters = {};
@@ -21,6 +22,10 @@ const actions = {
 const mutations = {
   setPhotos(state, payload) {
     state.allPhotos = payload;
+  },
+
+  addToBasket(state, payload) {
+    state.basket.push(payload);
   },
 };
 

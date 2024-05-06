@@ -2,6 +2,8 @@
   <div class="overflow-x-hidden">
     <FilterNav />
 
+    {{ basket }}
+
     <div class="flex-between flex-wrap overflow-x-hidden mt-10 gap-5">
       <div v-for="photo in photos" :key="photo.id" class="flex flex-col flex-center w-[25rem]">
         <PhotoItemVue :photo="photo" />
@@ -45,7 +47,8 @@ export default {
   components: { FilterNav, PhotoItemVue },
 
   computed: mapState({
-    photos: state => state.photos.allPhotos.data
+    photos: state => state.photos.allPhotos.data,
+    basket: state => state.photos.basket,
   }),
 
   created() {
