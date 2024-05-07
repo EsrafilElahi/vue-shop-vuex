@@ -21,34 +21,13 @@ import PhotoItemVue from '@/components/PhotoItem.vue';
 export default {
   name: '-Home-',
   data() {
-    return {
-      cards: [
-        {
-          id: 1,
-          imag: 'img 1',
-          title: 'title 1',
-          price: 100000
-        },
-        {
-          id: 2,
-          imag: 'img 2',
-          title: 'title 2',
-          price: 200000
-        },
-        {
-          id: 3,
-          imag: 'img 3',
-          title: 'title 3',
-          price: 550000
-        }
-      ]
-    }
+    return {}
   },
   components: { FilterNav, PhotoItemVue },
 
   computed: mapState({
-    photos: state => state.photos.allPhotos.data,
-    basket: state => state.photos.basket,
+    photos: (state) => state.photos.allPhotos,
+    basket: (state) => state.photos.basket,
   }),
 
   created() {

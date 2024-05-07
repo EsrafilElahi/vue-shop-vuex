@@ -8,13 +8,15 @@ const state = () => ({
 const getters = {};
 
 const actions = {
-  async getAllPhotos({ commit }) {
-    const photos = await axios.get(
-      "https://jsonplaceholder.typicode.com/photos"
-    );
+  async getAllPhotos({ commit, state }) {
+    if (!state?.photos?.allPhotos?.length > 0) {
+      const photos = await axios.get(
+        "https://jsonplaceholder.typicode.com/photos"
+      );
 
-    if (photos) {
-      commit("setPhotos", photos);
+      if (photos) {
+        commit("setPhotos", photos.data);
+      }
     }
   },
 };
