@@ -15,20 +15,20 @@
 import FilterNav from '@/components/FilterNav.vue';
 import { mapState } from 'vuex';
 import PhotoItemVue from '@/components/PhotoItem.vue';
- 
+
 export default {
-  name: '-Home-', 
+  name: '-Home-',
   data() {
     return {}
   },
-  components: { FilterNav, PhotoItemVue },  
-  
+  components: { FilterNav, PhotoItemVue },
+
   computed: {
     ...mapState({
       photos: (state) => state.photos.allPhotos,
-      basket: (state) => state.photos.basket, 
+      basket: (state) => state.photos.basket,
     }),
-    filterPhotos() { 
+    filterPhotos() {
       return this.photos
     }
   },
