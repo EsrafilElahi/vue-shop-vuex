@@ -10,7 +10,7 @@
 
   </div>
 </template>
-
+ 
 <script>
 import FilterNav from '@/components/FilterNav.vue';
 import { mapState } from 'vuex';
