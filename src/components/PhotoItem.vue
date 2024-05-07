@@ -14,7 +14,7 @@ export default {
 
   methods: {
     handleAddToBasket(photo) {
-      this.$store.commit('photos/addToBasket', photo)
+      this.$store.commit('photos/nestedPhotos/addToBasket', photo);
     }
   }
 }

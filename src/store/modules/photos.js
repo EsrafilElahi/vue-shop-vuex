@@ -1,8 +1,9 @@
 import axios from "axios";
+import nestedPhotos from "./nestedPhotos";
 
 const state = () => ({
   allPhotos: [],
-  basket: [],
+  // basket: [],
 });
 
 const getters = {};
@@ -26,9 +27,9 @@ const mutations = {
     state.allPhotos = payload;
   },
 
-  addToBasket(state, payload) {
-    state.basket.push(payload);
-  },
+  // addToBasket(state, payload) {
+  //   state.basket.push(payload);
+  // },
 };
 
 export default {
@@ -37,4 +38,7 @@ export default {
   getters,
   actions,
   mutations,
+  modules: {
+    nestedPhotos,
+  },
 };

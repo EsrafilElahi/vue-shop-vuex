@@ -27,7 +27,7 @@ export default {
   name: "-Basket-",
 
   computed: mapState({
-    basket: (state) => state.photos.basket
+    basket: (state) => state.photos.nestedPhotos.basket
   })
 }
 </script>
