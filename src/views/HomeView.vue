@@ -26,7 +26,7 @@ export default {
   computed: {
     ...mapState({
       photos: (state) => state.photos.allPhotos,
-      basket: (state) => state.photos.basket,
+      basket: (state) => state.photos.basket, 
     }),
     filterPhotos() { 
       return this.photos
