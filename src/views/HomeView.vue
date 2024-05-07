@@ -28,7 +28,7 @@ export default {
       photos: (state) => state.photos.allPhotos,
       basket: (state) => state.photos.basket,
     }),
-    filterPhotos() {
+    filterPhotos() { 
       return this.photos
     }
   },
