@@ -1,8 +1,9 @@
 <template>
   <div class="flex-center gap-4">
-    <button class="btn">digital</button>
-    <button class="btn">clothes</button>
-    <button class="btn">shoes</button>
+    <button class="btn">All Album</button>
+    <button class="btn">Album 1</button>
+    <button class="btn">Album 2</button>
+    <button class="btn">Album 3</button>
   </div>
 </template>
 
