@@ -17,18 +17,25 @@
       </tbody>
     </table>
 
+    <h2 class="mt-10 font-bold text-xl">
+      TotlaPrice : {{ getTotlaPrice }}0000 $
+    </h2>
+
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   name: "-Basket-",
 
-  computed: mapState({
-    basket: (state) => state.photos.nestedPhotos.basket
-  })
+  computed: {
+    ...mapState({
+      basket: (state) => state.photos.nestedPhotos.basket
+    }),
+    ...mapGetters('photos/nestedPhotos', ['getTotlaPrice'])
+  }
 }
 </script>
 

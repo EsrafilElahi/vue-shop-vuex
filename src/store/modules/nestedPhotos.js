@@ -2,7 +2,13 @@ const state = () => ({
   basket: [],
 });
 
-const getters = {};
+const getters = {
+  getTotlaPrice: (state) => {
+    return state.basket.reduce((acc, val) => {
+      return acc + val.id;
+    }, 0);
+  },
+};
 
 const mutations = {
   addToBasket(state, payload) {
