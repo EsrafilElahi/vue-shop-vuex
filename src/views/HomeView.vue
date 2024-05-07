@@ -39,7 +39,6 @@ export default {
       album2: (state) => state.photos.album2,
       album3: (state) => state.photos.album3,
     }),
-    // eslint-disable-next-line vue/return-in-computed-property
     filterPhotos() {
       if (this.selectedFilterNav === 'album_1') {
         return this.album1
