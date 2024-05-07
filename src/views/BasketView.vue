@@ -13,7 +13,6 @@
         <tr v-for="(item) in basket" :key="item.id">
           <td>{{ item.title }}</td>
           <td>{{ item.id }}0000</td>
-          <!-- Display other item properties as needed -->
         </tr>
       </tbody>
     </table>

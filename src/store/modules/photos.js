@@ -9,7 +9,7 @@ const getters = {};
 
 const actions = {
   async getAllPhotos({ commit, state }) {
-    if (!state?.photos?.allPhotos?.length > 0) {
+    if (!state?.allPhotos?.length > 0) {
       const photos = await axios.get(
         "https://jsonplaceholder.typicode.com/photos"
       );
