@@ -4,7 +4,7 @@
     <table>
       <thead>
         <tr>
-          <th>title</th>
+          <th>Title</th>
           <th>Price</th>
         </tr>
       </thead>
