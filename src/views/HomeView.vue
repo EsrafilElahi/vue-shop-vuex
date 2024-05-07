@@ -17,7 +17,7 @@ import { mapState } from 'vuex';
 import PhotoItemVue from '@/components/PhotoItem.vue';
 
 export default {
-  name: '-Home-',
+  name: '-Home-', 
   data() {
     return {}
   },
