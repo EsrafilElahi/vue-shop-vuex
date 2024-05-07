@@ -22,7 +22,7 @@ export default {
     return {}
   },
   components: { FilterNav, PhotoItemVue },
-
+ 
   computed: {
     ...mapState({
       photos: (state) => state.photos.allPhotos,
