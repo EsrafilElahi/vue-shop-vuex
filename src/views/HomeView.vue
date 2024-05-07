@@ -6,8 +6,8 @@
       <div v-for="photo in photos" :key="photo.id" class="flex flex-col flex-center w-[25rem]">
         <PhotoItemVue :photo="photo" />
       </div>
-
     </div>
+
   </div>
 </template>
 
