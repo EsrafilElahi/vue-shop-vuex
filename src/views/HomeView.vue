@@ -21,7 +21,7 @@ export default {
   data() {
     return {}
   },
-  components: { FilterNav, PhotoItemVue }, 
+  components: { FilterNav, PhotoItemVue },  
   
   computed: {
     ...mapState({
