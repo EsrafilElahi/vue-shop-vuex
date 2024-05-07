@@ -1,6 +1,9 @@
 import axios from "axios";
 import nestedPhotos from "./nestedPhotos";
 
+// actions ---> async like api ==> dispatch
+// mutations ----> sync like setState inside app ==> commit
+
 const state = () => ({
   allPhotos: [],
   album1: [],
@@ -35,14 +38,6 @@ const actions = {
       );
 
       if (albumPhotos) {
-        // if (albumId === 1) {
-        //   state.album1 = albumPhotos;
-        // } else if (albumId === 2) {
-        //   state.album2 = albumPhotos;
-        // } else {
-        //   state.album3 = albumPhotos;
-        // }
-
         commit("setAlbumPhotos", albumPhotos, albumId);
       }
     }
