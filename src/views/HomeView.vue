@@ -15,13 +15,13 @@
 import FilterNav from '@/components/FilterNav.vue';
 import { mapState } from 'vuex';
 import PhotoItemVue from '@/components/PhotoItem.vue';
-
+ 
 export default {
   name: '-Home-', 
   data() {
     return {}
   },
-  components: { FilterNav, PhotoItemVue },
+  components: { FilterNav, PhotoItemVue }, 
   
   computed: {
     ...mapState({
