@@ -29,16 +29,23 @@ const actions = {
 
   async getAlbumPhotosByAlbumId({ commit, state }, albumId) {
     if (
-      !state.album1.length > 1 ||
-      !state.album2.length > 1 ||
-      !state.album3.length > 1
+      !state.album1.length > 0 ||
+      !state.album2.length > 0 ||
+      !state.album3.length > 0
     ) {
+      console.log("album id api :", albumId);
       const albumPhotos = await axios.get(
         `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`
       );
 
       if (albumPhotos) {
-        commit("setAlbumPhotos", albumPhotos, albumId);
+        if (albumId === 1) {
+          commit("setAlbumPhotos_1", albumPhotos.data);
+        } else if (albumId === 2) {
+          commit("setAlbumPhotos_2", albumPhotos.data);
+        } else {
+          commit("setAlbumPhotos_3", albumPhotos.data);
+        }
       }
     }
   },
@@ -49,14 +56,16 @@ const mutations = {
     state.allPhotos = payload;
   },
 
-  setAlbumPhotos(state, payload, albumId) {
-    if (albumId === 1) {
-      state.album1 = payload;
-    } else if (albumId === 2) {
-      state.album2 = payload;
-    } else {
-      state.album3 = payload;
-    }
+  setAlbumPhotos_1(state, payload) {
+    state.album1 = payload;
+  },
+
+  setAlbumPhotos_2(state, payload) {
+    state.album2 = payload;
+  },
+
+  setAlbumPhotos_3(state, payload) {
+    state.album3 = payload;
   },
 
   // addToBasket(state, payload) {
