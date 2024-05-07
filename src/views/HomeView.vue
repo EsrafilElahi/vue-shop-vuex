@@ -23,10 +23,15 @@ export default {
   },
   components: { FilterNav, PhotoItemVue },
 
-  computed: mapState({
-    photos: (state) => state.photos.allPhotos,
-    basket: (state) => state.photos.basket,
-  }),
+  computed: {
+    ...mapState({
+      photos: (state) => state.photos.allPhotos,
+      basket: (state) => state.photos.basket,
+    }),
+    filterPhotos() {
+      return this.photos
+    }
+  },
 
   created() {
     this.$store.dispatch('photos/getAllPhotos')
